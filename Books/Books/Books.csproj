@@ -85,17 +85,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\BookController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Auth.cs" />
+    <Compile Include="Models\AuthSqlImpl.cs" />
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\BookSqlImpl.cs" />
+    <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\CategorySqlImpl.cs" />
+    <Compile Include="Models\IAuthRepository.cs" />
     <Compile Include="Models\IBookRepository.cs" />
     <Compile Include="Models\ICategoryRespository.cs" />
+    <Compile Include="Models\IOrderRepository.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderSqlImpl.cs" />
+    <Compile Include="Models\WhishList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
