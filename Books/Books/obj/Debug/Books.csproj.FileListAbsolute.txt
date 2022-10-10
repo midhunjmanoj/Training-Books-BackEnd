@@ -65,3 +65,6 @@ C:\Users\mmanoj\Desktop\soti\Project-1\BackEndBook\Books\Books\bin\Microsoft.Cod
 C:\Users\mmanoj\Desktop\soti\Project-1\BackEndBook\Books\Books\obj\Debug\Books.csproj.CopyComplete
 C:\Users\mmanoj\Desktop\soti\Project-1\BackEndBook\Books\Books\obj\Debug\Books.dll
 C:\Users\mmanoj\Desktop\soti\Project-1\BackEndBook\Books\Books\obj\Debug\Books.pdb
+C:\Users\mmanoj\Desktop\soti\Project-1\BackEndBook\Books\Books\bin\System.Web.Cors.dll
+C:\Users\mmanoj\Desktop\soti\Project-1\BackEndBook\Books\Books\bin\System.Web.Http.Cors.dll
+C:\Users\mmanoj\Desktop\soti\Project-1\BackEndBook\Books\Books\bin\System.Web.Http.Cors.xml

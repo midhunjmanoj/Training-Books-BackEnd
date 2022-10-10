@@ -79,6 +79,32 @@ namespace Books.Models
             return list;
         }
 
+        public List<Book> GetBookByCategory(string catId)
+        {
+            List<Book> list = new List<Book>();
+            comm.CommandText = "select * from book where CategoryId='"+catId+"'";
+            comm.Connection = conn;
+            conn.Open();
+            SqlDataReader reader = comm.ExecuteReader();
+            while (reader.Read())
+            {
+                string bookId = reader["BookId"].ToString();
+                string categoryId = reader["CategoryId"].ToString();
+                string title = reader["Title"].ToString();
+                int isbn = Convert.ToInt32(reader["Isbn"]);
+                int year = Convert.ToInt32(reader["Year"]);
+                int price = Convert.ToInt32(reader["Price"]);
+                string description = reader["Description"].ToString();
+                string position = reader["Position"].ToString();
+                string status = reader["Status"].ToString();
+                string image = reader["Image"].ToString();
+
+                list.Add(new Book(bookId, categoryId, title, isbn, year, price, description, position, status, image));
+            }
+            conn.Close();
+            return list;
+        }
+
         public Book GetBookById(string BookId)
         {
             comm.CommandText = "select * from Book where BookId = '" + BookId+"'";

@@ -4,10 +4,12 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using Books.Models;
 
 namespace Books.Controllers
 {
+    [EnableCors(origins:"http://localhost:4200", headers:"*", methods:"*")]
     public class BookController : ApiController
     {
         private IBookRepository repository;
@@ -23,11 +25,12 @@ namespace Books.Controllers
             var data = repository.GetAllBook();
             return Ok(data);
         }
-
+        
         [HttpGet]
-        public IHttpActionResult Get(string id)
+        public IHttpActionResult Get(string catId)
         {
-            var data = repository.GetBookById(id);
+            //catId = catId.Replace("%22"," ").Trim();
+            var data = repository.GetBookByCategory(catId);
             if (data == null)
                 return NotFound();
             return Ok(data);

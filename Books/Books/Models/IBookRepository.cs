@@ -9,6 +9,8 @@ namespace Books.Models
     public interface IBookRepository
     {
         List<Book> GetAllBook();
+
+        List<Book> GetBookByCategory(string catId);
         Book GetBookById(string Bookid);
         Book AddBook(Book book);
         void DeleteBook(string BookId);

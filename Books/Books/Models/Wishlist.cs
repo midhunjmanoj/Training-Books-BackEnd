@@ -5,12 +5,12 @@ using System.Web;
 
 namespace Books.Models
 {
-    public class WishList
+    public class Wishlist
     {
         public int BookId { get; set; }
         public int UserId { get; set; }
         
-        public WishList( int uid, int bid)
+        public Wishlist( int uid, int bid)
         {
             BookId = bid;
             UserId = uid;

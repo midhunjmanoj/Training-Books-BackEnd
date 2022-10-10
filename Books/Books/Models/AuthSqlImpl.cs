@@ -43,11 +43,11 @@ namespace Books.Models
             
             while (reader.Read())
             {
-                string adminid = reader["Email"].ToString();
+                string email = reader["Email"].ToString();
                 string pwd = reader["Password"].ToString();
                 string name = reader["Name"].ToString();
 
-                Auth admin = new Auth(adminid, pwd,name);
+                Auth admin = new Auth(email, pwd,name);
                 return admin;
             }
             conn.Close();
